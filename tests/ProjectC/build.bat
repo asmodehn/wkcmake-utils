@@ -1,12 +1,18 @@
 @echo off
-set BUILD_DIR="../ProjectC_build"
-set SRC_DIR=%CD%
+setlocal
+
+set BUILD_DIR="build"
+set SRC_DIR="%CD%"
 set BUILD_TYPE=Release
 set ENABLE_TESTS=ON
 
 @echo on
 
-mkdir %BUILD_DIR% && pushd %BUILD_DIR%
+set ORI_DIR=%CD%
+
+REM this can fail if directory already exist
+mkdir %BUILD_DIR%
+cd %BUILD_DIR%
 
 echo "Running in %CD% :"
 cmake -DProjectC_BUILD_TYPE=%BUILD_TYPE% -DProjectC_ENABLE_TESTS=%ENABLE_TESTS% %SRC_DIR%
@@ -31,4 +37,5 @@ devenv ProjectC.sln /Build %BUILD_TYPE%
 
 ctest
 
-popd
+cd %ORI_DIR%
+endlocal
