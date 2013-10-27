@@ -32,20 +32,21 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6 FATAL_ERROR )
 INCLUDE ( subCMake/WkCMake.cmake )
 WkCMakeDir ( subCMake )
 
+#declaring the project
+WkProject( ProjectCsub C )
+
 WkIncludeDir (subinclude)
 WkSrcDir ( subsrc )
 WkTestDir ( subtest )
 WkDocDir (subdoc)
 WkDataDir (subdata)
 
-#declaring the project
-WkProject( ProjectCsub C )
-
 #build rules for the project
 WkBuild( LIBRARY SHARED )
 
 WkDoc( )
-WkSvn( )
+#WkSvn( )
+#TODO WkGit
 
 #Testing
 WkTestBuild( maintestCsub )

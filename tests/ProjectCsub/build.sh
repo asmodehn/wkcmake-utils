@@ -1,11 +1,12 @@
 #!/bin/sh
 
-BUILD_DIR="../ProjectCsub_build"
+BUILD_DIR="build"
 SRC_DIR=`pwd`
 BUILD_TYPE=Release
 ENABLE_TESTS=ON
 
 set +x
+ORI_DIR=`pwd`
 
 mkdir -p $BUILD_DIR && \
 cd $BUILD_DIR
@@ -17,4 +18,4 @@ make
 
 ctest
 
- 
+cd $ORI_DIR 
