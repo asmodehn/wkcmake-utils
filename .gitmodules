@@ -1,9 +1,3 @@
-[submodule "tests/ProjectA/CMake"]
-	path = tests/ProjectA/CMake
-	url = https://github.com/asmodehn/wkcmake.git
-[submodule "tests/ProjectB/Custom CMake"]
-	path = tests/ProjectB/Custom CMake
-	url = https://github.com/asmodehn/wkcmake.git
 [submodule "tests/Bullet/CMake"]
 	path = tests/Bullet/CMake
 	url = https://github.com/asmodehn/wkcmake.git
@@ -22,5 +16,13 @@
 	branch = devel
 [submodule "tests/ProjectCsub/subCMake"]
 	path = tests/ProjectCsub/subCMake
+	url = https://github.com/asmodehn/wkcmake.git
+	branch = devel
+[submodule "tests/ProjectA/CMake"]
+	path = tests/ProjectA/CMake
+	url = https://github.com/asmodehn/wkcmake.git
+	branch = devel
+[submodule "tests/ProjectB/Custom CMake"]
+	path = tests/ProjectB/Custom CMake
 	url = https://github.com/asmodehn/wkcmake.git
 	branch = devel
